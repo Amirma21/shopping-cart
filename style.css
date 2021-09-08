@@ -76,3 +76,65 @@ p {
     top: -8;
     right: -12;
 }
+
+
+/*? --------start of prodouct ------*/
+
+.product {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product .title {
+    margin: 20px 0;
+    font-weight: 900px;
+}
+
+.product-container {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    margin-bottom: 50px;
+    padding: 0 10px;
+}
+
+.product-items {
+    background-color: var(--secondryWhite);
+    padding-bottom: 20px;
+    border-radius: 9px 0 8px 0;
+}
+
+.product-image {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.imgae-desc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.imgae-desc p {
+    font-size: 1rem;
+}
+
+button {
+    width: auto;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: .9rem;
+    background-color: var(--mainWhite);
+    color: var(--primaryColor);
+    margin: 2% 0px 0px 32%;
+    cursor: pointer;
+    border-radius: 5px;
+}
