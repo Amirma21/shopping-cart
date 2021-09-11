@@ -19,6 +19,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 body {
@@ -66,6 +67,8 @@ p {
 .counter {
     background-color: var(--mainRed);
     position: absolute;
+    top: -8px;
+    right: -12px;
     width: 22px;
     height: 22px;
     border-radius: 50%;
@@ -73,8 +76,6 @@ p {
     align-items: center;
     justify-content: center;
     color: var(--mainWhite);
-    top: -8;
-    right: -12;
 }
 
 
@@ -84,6 +85,7 @@ p {
     display: flex;
     align-items: center;
     flex-direction: column;
+   
 }
 
 .product .title {
@@ -125,7 +127,7 @@ p {
     font-size: 1rem;
 }
 
-button {
+.add-to-card {
     width: auto;
     padding: 10px 20px;
     border: none;
@@ -138,3 +140,128 @@ button {
     cursor: pointer;
     border-radius: 5px;
 }
+
+/* -----modal-----  */
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    transition:all .8s ease-in-out;
+}
+
+.modal{
+    width: 30rem;
+    height: auto;
+    background-color: var(--mainWhite);
+    position: fixed;
+    left: calc(100vw / 2 - (15rem));
+    top: -40rem;   
+    box-shadow: 0 20px 120px rgba(0, 0, 0, .7);
+    z-index: 999;
+    border-radius:20px ;
+    transition: all .8s ease-in-out;
+}
+.modal-title{
+    padding: .4rem;
+    text-align: center;
+    color:var(--mainBlack);
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 20px !important;
+}
+
+.row{
+    display: flex;
+    margin: 1.3rem 1.5rem;
+    justify-content: space-between;
+   
+}
+
+.modal-image-container img{
+    width: 120px;
+    height:70px;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.product-price{
+    width: calc(30rem / 4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.modal-price{
+    color: var(--mainGray);
+}
+
+.delete{
+    display: flex;
+    align-items: center;
+}
+.fa-trash{
+    color: var(--mainGray);
+}
+.fa-trash:hover{
+    color: red;
+}
+.fas{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fa-chevron-down{
+   color: red;
+}
+.fa-chevron-up{
+    color: var(--primaryColor);
+}
+.numberproduct{
+    font-size: 18px;
+    text-align: center;
+}
+
+.modal-price-title{
+    font-size: 16px;
+
+}
+
+.modal-footer{
+    display: flex;
+   justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    margin: 2rem 0 .5rem 0;
+    border-top: 1px solid rgba(0, 0,0, 0.1);
+}
+.modal-clear-btn{
+    border: 1px solid var(--primaryColor);
+    transition: all 0.4s ease-in-out;
+}
+.modal-clear-btn:hover{
+    color: var(--mainWhite);
+    background-color: var(--primaryColor);
+}
+.modal-confirm-btn{
+    border: none;
+}
+
+.modal-clear-btn, 
+.modal-confirm-btn{
+    width: 6rem;
+    height: 2rem;
+    border-radius: 15px;
+    cursor: pointer;
+    color:var(--primaryColor);
+    background-color: var(--mainWhite);
+    font-size: 16px;
+
+}
+
